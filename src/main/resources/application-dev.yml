@@ -1,0 +1,48 @@
+server:
+    tomcat:
+        uri-encoding: UTF-8
+        threads:
+            max: 1000
+            min-spare: 30
+    port: 8088
+    #connection-timeout: 5000ms
+    servlet:
+        context-path: /taokoo
+
+spring:
+    datasource:
+        type: com.alibaba.druid.pool.DruidDataSource
+        druid:
+            #oracle
+            #username: root
+            #password: 123456
+            #driver-class-name: oracle.jdbc.driver.OracleDriver
+            #url: jdbc:oracle:thin:@127.0.0.1:1521:project_0
+
+            #mysql
+            driver-class-name: com.mysql.cj.jdbc.Driver
+            url: jdbc:mysql://127.0.0.1:3306/project_0?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+            username: root
+            password: 1234
+    redis:
+        host: 127.0.0.1
+        port: 6379
+        timeout: 10s
+        password: 1234
+        lettuce:
+            pool:
+                # 连接池中的最小空闲连接
+                min-idle: 2
+                # 连接池中的最大空闲连接
+                max-idle: 8
+                # 连接池的最大数据库连接数
+                max-active: 8
+                #连接池最大阻塞等待时间（使用负值表示没有限制）
+                max-wait: -1m
+
+swagger:
+    enable: true
+    application-version: 1.0
+    application-title: 接口文档
+    application-description: Swagger3
+    resource-url: https://gitee.com/taokoo/Project_0

@@ -1,0 +1,2 @@
+1，新建数据库执行sql脚本，并修改相关配置即可运行
+2，接口文档为localhost:8088/taokoo/doc.html
